@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/base.css"></link>
+  <link rel="stylesheet" type="text/css" href="css/state.css"></link>
+  <title>渝书坊</title>
+  <script>
+    function fullScreen() {
+      var docElm = document.documentElement;
+      //W3C
+      if (docElm.requestFullscreen) {
+        docElm.requestFullscreen();
+      }
+      //FireFox
+      else if (docElm.mozRequestFullScreen) {
+        docElm.mozRequestFullScreen();
+      }
+      //Chrome等
+      else if (docElm.webkitRequestFullScreen) {
+        docElm.webkitRequestFullScreen();
+      }
+      //IE11
+      else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      }
+    }
+    window.onload = function () {
+      fullScreen()
+    }
+  </script>
+</head>
+
+<body onclick="fullScreen()">
+  <noscript>
+    <strong>We're sorry but ultra-shbank-portal-bigdata-client doesn't work properly without JavaScript enabled. Please
+      enable it to continue.</strong>
+  </noscript>
+  <div id="app" class="p-state">
+    <div id="time"></div>
+    <div class="content">
+      <div class="show-box">
+        <div class="show-item">
+          <img class="show-top" src="img/state/live/top.png" alt="">
+          <div class="show-img-box show-img-box1">
+            <img class="cover" src="img/state/live/cover.png" alt="">
+            <div class="blank">
+            </div>
+            <div class="blank-min"></div>
+            <img class="show-content" src="img/state/live/content.png" alt="">
+            <img class="footer" src="img/state/live/footer.png" alt="">
+            <img class="light" src="img/state/live/light.png" alt="">
+            <img class="max-light" src="img/state/live/max-light.png" alt="">
+          </div>
+          <div class="show-btn btn1">
+            <img class="light-line" src="img/state/light-line.png" alt="">
+          </div>
+        </div>
+        <div class="show-item">
+          <img class="show-top" src="img/state/souce/top.png" alt="">
+          <div class="show-img-box  show-img-box2">
+            <img class="cover" src="img/state/souce/cover.png" alt="">
+            <img class="blank" src="img/state/souce/blank.png" alt="">
+            <div class="show-content"></div>
+            <img class="footer" src="img/state/souce/footer.png" alt="">
+            <div class="light-box light-box1">
+              <img class="light" src="img/state/souce/light.png" alt="">
+            </div>
+            <div class="light-box light-box2">
+              <img class="light" src="img/state/souce/light.png" alt="">
+            </div>
+            <div class="light-box light-box3">
+              <img class="light" src="img/state/souce/light.png" alt="">
+            </div>
+            <img class="card1" src="img/state/souce/card1.png" alt="">
+            <img class="card2" src="img/state/souce/card2.png" alt="">
+          </div>
+          <div class="show-btn btn2">
+            <img class="light-line" src="img/state/light-line.png" alt="">
+          </div>
+        </div>
+        <div class="show-item">
+          <img class="show-top" src="img/state/teacher/top.png" alt="">
+          <div class="show-img-box  show-img-box3">
+            <img class="cover" src="img/state/teacher/cover.png" alt="">
+            <div class="blank-box">
+              <img class="blank-bg" src="img/state/teacher/blank-bg.png" >
+              <div class="blank-content"></div>
+            </div>
+            <div class="blank-min-box">
+              <img src="img/state/teacher/blank-min-bg.png" alt="" class="blank-min-bg">
+              <div class="blank-min-content"></div>
+            </div>
+            <img class="show-content" src="img/state/teacher/content.png" alt="">
+            <img class="footer" src="img/state/teacher/footer.png" alt="">
+            <img class="light" src="img/state/teacher/light.png" alt="">
+            
+            <div class="msg-box">
+              <img class="msg" src="img/state/teacher/msg.png" alt="">
+            </div>
+          </div>
+          <div class="show-btn btn3">
+            <img class="light-line" src="img/state/light-line.png" alt="">
+          </div>
+        </div>
+        <div class="show-item">
+          <img class="show-top" src="img/state/score/top.png" alt="">
+          <div class="show-img-box  show-img-box4">
+            <img class="cover" src="img/state/score/cover.png" alt="">
+            <img class="safe" src="img/state/score/safe.png" alt="">
+            <img class="floor" src="img/state/score/floor.png" alt="">
+            <div class="show-content">
+              <div class="font-cover"></div>
+            </div>
+            <!-- <img class="show-content" src="img/state/score/content.png" alt=""> -->
+            <img class="footer" src="img/state/score/footer.png" alt="">
+            <img class="ok" src="img/state/score/ok.png" alt="">
+          </div>
+          <div class="show-btn btn4">
+            <img class="light-line" src="img/state/light-line.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="right-menu">
+        <div class="right-menu-title">
+          <div class="light-box">
+            <div class="light-item item1"></div>
+            <div class="light-item item2"></div>
+            <div class="light-item item3"></div>
+            <div class="light-item item4"></div>
+            <div class="light-item item5"></div>
+            <div class="light-item item6"></div>
+          </div>
+          <img class="light-line" src="img/state/light-line.png" alt="">
+        </div>
+        <div class="right-menu-item menu-item1">
+          <img class="light-line" src="img/state/light-line.png" alt="">
+        </div>
+        <div class="right-menu-item menu-item2">
+          <img class="light-line" src="img/state/light-line.png" alt="">
+        </div>
+        <div class="right-menu-item menu-item3">
+          <img class="light-line" src="img/state/light-line.png" alt="">
+        </div>
+        <div class="right-menu-item menu-item4">
+          <img class="light-line" src="img/state/light-line.png" alt="">
+        </div>
+        <div class="right-menu-item menu-item5">
+          <img class="light-line" src="img/state/light-line.png" alt="">
+        </div>
+        <div class="right-menu-item menu-item6">
+          <img class="light-line" src="img/state/light-line.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="top">
+        <div class="line-box">
+          <img class="arrow" src="img/state/arrow.png" alt="">
+          <div class="line"></div>
+          <img class="point topIn" src="img/state/point.png" alt="">
+        </div>
+      </div>
+      <div class="left">
+         <div class="line-box">
+           <img class="arrow" src="img/state/arrow.png" alt="">
+           <div class="line"></div>
+           <img class="point rightIn" src="img/state/point.png" alt="">
+         </div>
+      </div>
+      <div class="center">
+        <img class="light-line" src="img/state/light-line.png" alt="">
+      </div>
+      <div class="right">
+        <div class="line-box">
+          <img class="arrow" src="img/state/arrow.png" alt="">
+          <div class="line"></div>
+          <img class="point leftIn" src="img/state/point.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  function formatDate(date) {
+  var date = null
+  if (date) {
+    date = new Date(date)
+  } else {
+    date = new Date();
+  }
+  var YY = date.getFullYear();
+  var MM = date.getMonth() + 1;
+  var DD = date.getDate();
+  var hh = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours());
+  var mm = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+  var ss = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+  return YY + '年' + MM + '月' + DD +"日 "+hh+ ':' + mm + ':' + ss;
+}
+var timeEl = document.getElementById('time');
+function buildTime () {
+  timeEl.innerText = formatDate()
+}
+buildTime();
+setInterval(() => {
+  buildTime();
+}, 1000);
+</script>
+
+</html>

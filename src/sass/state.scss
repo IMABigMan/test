@@ -1,0 +1,992 @@
+@import "./commonFn.scss";
+@-webkit-keyframes fadeScaleLeftIn {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  50% {
+    left: 45%;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@keyframes fadeScaleLeftIn {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  50% {
+    left: 45%;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pointrightIn {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@keyframes pointrightIn {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@-webkit-keyframes pointleftIn {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes pointleftIn {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes pointtopIn {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes pointtopIn {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@-webkit-keyframes lightning {
+  0% {
+    background-color: rgba(54, 222, 241, 0.4);
+  }
+  50% {
+    background-color: rgba(54, 222, 241, 0.8);
+  }
+  100% {
+    background-color: rgba(54, 222, 241, 1);
+  }
+}
+@keyframes lightning {
+  0% {
+    background-color: rgba(54, 222, 241, 0.4);
+  }
+  50% {
+    background-color: rgba(54, 222, 241, 0.8);
+  }
+  100% {
+    background-color: rgba(54, 222, 241, 1);
+  }
+}
+@-webkit-keyframes lightScale {
+  0% {
+    width: 250px;
+  }
+  50% {
+    width: 175px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+@keyframes lightScale {
+  0% {
+    width: 250px;
+  }
+  50% {
+    width: 175px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+@-webkit-keyframes upDown-min {
+  0% {
+    @include transform(translateY(0));
+  }
+  50% {
+    @include transform(translateY(-5px));
+  }
+  100% {
+    @include transform(translateY(-10px));
+  }
+}
+@keyframes upDown-min {
+  0% {
+    @include transform(translateY(0));
+  }
+  50% {
+    @include transform(translateY(-5px));
+  }
+  100% {
+    @include transform(translateY(-10px));
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes msgOpen {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes msgOpen {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+@-webkit-keyframes btnleftIn {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 100%;
+  }
+  100% {
+    left: 300%;
+  }
+}
+@keyframes btnleftIn {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 300%;
+  }
+}
+@-webkit-keyframes btnleftInBig {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 100%;
+  }
+  100% {
+    left: 300%;
+  }
+}
+@keyframes btnleftInBig {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 100%;
+  }
+  100% {
+    left: 300%;
+  }
+}
+@-webkit-keyframes btnRightIn {
+  0% {
+    left: 100%;
+    @include transform(translateX(0));
+  }
+  20% {
+    left: 0;
+    @include transform(translateX(-100%));
+  }
+  100% {
+    left: -100%;
+    @include transform(translateX(0));
+  }
+}
+@keyframes btnRightIn {
+  0% {
+    left: 100%;
+    @include transform(translateX(0));
+  }
+  20% {
+    left: 0;
+    @include transform(translateX(-100%));
+  }
+  100% {
+    left: -100%;
+    @include transform(translateX(0));
+  }
+}
+@-webkit-keyframes blankBg1 {
+  0% {
+    background-image: url('../img/state/live/blank1.png');
+  }
+  100% {
+    background-image: url('../img/state/live/blank2.png');
+  }
+}
+@keyframes blankBg1 {
+  0% {
+    background-image: url('../img/state/live/blank1.png');
+  }
+  100% {
+    background-image: url('../img/state/live/blank2.png');
+  }
+}
+@-webkit-keyframes blankBg2 {
+  0% {
+    background-image: url('../img/state/souce/content2.png');
+  }
+  75% {
+    background-image: url('../img/state/souce/content1.png');
+  }
+  100% {
+    background-image: url('../img/state/souce/content1.png');
+  }
+}
+@keyframes blankBg2 {
+  0% {
+    background-image: url('../img/state/souce/content2.png');
+  }
+  75% {
+    background-image: url('../img/state/souce/content1.png');
+  }
+  100% {
+    background-image: url('../img/state/souce/content1.png');
+  }
+}
+@-webkit-keyframes blankBg4 {
+  0% {
+    background-image: url('../img/state/score/content1.png');
+  }
+  75% {
+    background-image: url('../img/state/score/content2.png');
+  }
+  100% {
+    background-image: url('../img/state/score/content2.png');
+  }
+}
+@keyframes blankBg4 {
+  0% {
+    background-image: url('../img/state/score/content1.png');
+  }
+  75% {
+    background-image: url('../img/state/score/content2.png');
+  }
+  100% {
+    background-image: url('../img/state/score/content2.png');
+  }
+}
+@-webkit-keyframes blankMinBg1 {
+  0% {
+    background-image: url('../img/state/live/blank-min1.png');
+  }
+  100% {
+    background-image: url('../img/state/live/blank-min2.png');
+  }
+}
+@keyframes blankMinBg1 {
+  0% {
+    background-image: url('../img/state/live/blank-min2.png');
+  }
+  100% {
+    background-image: url('../img/state/live/blank-min1.png');
+  }
+}
+@-webkit-keyframes transLeft {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes transLeft {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes transFont {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 0;
+  }
+  50% {
+    width: 63px;
+  }
+  100% {
+    width: 63px;
+  }
+}
+@keyframes transFont {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 0;
+  }
+  50% {
+    width: 63px;
+  }
+  100% {
+    width: 63px;
+  }
+}
+
+#app {
+  position: relative;
+  padding-top: 108px;
+  width: 1920px;
+  height: 1080px;
+  background-image: url("../img/state/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  #time {
+    position: absolute;
+    top: 37px;
+    right: 136px;
+    font-size: 14px;
+    color: #95f0fd;
+  }
+}
+
+.p-state .content {
+  
+  display: flex;
+  margin: 0 10px 0;
+  padding: 28px 43px 0;
+  justify-content: space-between;
+  height: 778px;
+  background-image: url("../img/state/content-bg.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  .show-box {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 60px;
+    flex: 1;
+    .show-item {
+    }
+    .show-top {
+      position: absolute;
+      display: block;
+      margin: 0 auto;
+      z-index: 8;
+    }
+    .show-img-box {
+      position: relative;
+      margin-top: 242px;
+      width: 322px;
+      height: 381px;
+      &.show-img-box1 {
+        .blank {
+          position: absolute;
+          left: 15px;
+          top: 65px;
+          width: 141px;
+          height: 167px;
+          background-image: url('../img/state/live/blank2.png');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          z-index: 0;
+          @include animation(blankBg1 2s linear 0s infinite alternate,upDown-min 2s linear 0s infinite alternate);
+        }
+        .blank-min {
+          position: absolute;
+          left: 21px;
+          top: 106px;
+          width: 106px;
+          height: 122px;
+          background-image: url('../img/state/live/blank-min2.png');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          z-index: 2;
+          @include animation(blankMinBg1 2s linear 1s infinite alternate, upDown-min 2s linear 1s infinite alternate);
+        }
+        .light {
+          position: absolute;
+          top: 50px;
+          right: 91px;
+          width: 46px;
+          z-index: 1;
+          @include animation(fadeIn 2s linear 0s infinite alternate);
+        }
+        .max-light {
+          position: absolute;
+          top: 156px;
+          right: 50px;
+          z-index: 2;
+          @include animation(fadeIn 2s linear 1s infinite alternate);
+        }
+        .show-content {
+          position: absolute;
+          width: 100%;
+          bottom: 60px;
+          z-index: 1;
+        }
+      }
+      &.show-img-box2 {
+        .show-content {
+          position: absolute;
+          top: 71px;
+          left: 56px;
+          width: 194px;
+          height: 245px;
+          background-image: url('../img/state/souce/content2.png');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          @include animation(blankBg2 3s linear 0s infinite alternate);
+          z-index: 1;
+        }
+        .blank {
+          position: absolute;
+          top: 115px;
+          left: 79px;
+          width: 53px;
+          z-index: 0;
+          @include animation(upDown-min 2s linear 1s infinite alternate);
+        }
+        .card1 {
+          position: absolute;
+          right: 60px;
+          bottom: 104px;
+          width: 46px;
+          z-index: 1;
+          @include animation(upDown-min 2s linear 0s infinite alternate);
+        }
+        .card2 {
+          position: absolute;
+          right: 37px;
+          bottom: 89px;
+          width: 46px;
+          z-index: 1;
+          @include animation(upDown-min 2s linear 1s infinite alternate);
+        }
+        .light-box {
+          position: absolute;
+          width: 34px;
+          height: 96px;
+          z-index: 0;
+          background-size: 100% 100%;
+          &.light-box1 {
+            left: 22px;
+            top: 138px;
+          }
+          &.light-box2 {
+            left: 209px;
+            top: 70px;
+          }
+          &.light-box3 {
+            right: 22px;
+            top: 160px;
+          }
+          .light {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+          }
+          &.light-box1 {
+            background-image: url("../img/state/souce/light-box1.png");
+            @include animation(upDown-min 2s linear 0s infinite alternate);
+            .light {
+              @include animation(fadeIn 2s linear 0s infinite alternate);
+            }
+          }
+          &.light-box2 {
+            background-image: url("../img/state/souce/light-box2.png");
+            @include animation(upDown-min 2s linear 1s infinite alternate);
+            .light {
+              @include animation(fadeIn 2s linear 1s infinite alternate);
+            }
+          }
+          &.light-box3 {
+            background-image: url("../img/state/souce/light-box3.png");
+            @include animation(upDown-min 2s linear 2s infinite alternate);
+            .light {
+              @include animation(fadeIn 2s linear 2s infinite alternate);
+            }
+          }
+        }
+      }
+      &.show-img-box3 {
+        .show-content {
+          position: absolute;
+          left: 63px;
+          top: 123px;
+          width: 198px;
+          z-index: 1;
+        }
+        .blank {
+          position: absolute;
+          top: 64px;
+          left: 20px;
+          width: 99px;
+          z-index: 0;
+          @include animation(upDown-min 2s linear 0s infinite alternate);
+        }
+        .blank-box {
+          position: absolute;
+          top: 64px;
+          left: 20px;
+          width: 99px;
+          height: 118px;
+          overflow: hidden;
+          z-index: 0;
+          @include animation(upDown-min 2s linear 0s infinite alternate);
+          .blank-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+          }
+          .blank-content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-image: url('../img/state/teacher/blank-content.png');
+            background-repeat: no-repeat;
+            background-size: 99px 118px;
+            
+            @include animation(transLeft 3s linear 0s infinite alternate);
+          }
+        }
+        .blank-min-box {
+          position: absolute;
+          right: 50px;
+          top: 113px;
+          width: 66px;
+          height: 81px;
+          z-index: 0;
+          overflow: hidden;
+          @include animation(upDown-min 2s linear 1s infinite alternate);
+          .blank-min-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+          }
+          .blank-min-content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-image: url('../img/state/teacher/blank-min-content.png');
+            background-repeat: no-repeat;
+            background-size: 66px 81px;
+            @include animation(transLeft 3s linear 1s infinite alternate);
+          }
+        }
+        .blank-min {
+          position: absolute;
+          right: 50px;
+          top: 113px;
+          z-index: 0;
+          @include animation(upDown-min 2s linear 1s infinite alternate);
+        }
+        .light {
+          position: absolute;
+          top: 192px;
+          left: 143px;
+          z-index: 2;
+          @include animation(fadeIn 2s linear 0s infinite alternate);
+        }
+        .msg-box {
+          position: absolute;
+          top: 94px;
+          left: 112px;
+          width: 28px;
+          z-index: 1;
+          overflow: hidden;
+          @include animation(upDown-min 2s linear 2s infinite alternate);
+          .msg {
+            display: block;
+            width: 28px;
+          }
+        }
+      }
+      &.show-img-box4 {
+        .show-content {
+          position: absolute;
+          left: 50px;
+          bottom: 63px;
+          width: 217px;
+          height: 204px;
+          z-index: 1;
+          background-image: url('../img/state/score/content2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          @include animation(blankBg4 2s linear 0s infinite alternate);
+          .font-cover {
+            position: absolute;
+            left: 81px;
+            top: 37px;
+            width: 50px;
+            height: 63px;
+            background-image: url('../img/state/score/content-font.png');
+            background-size: 50px 63px;
+            background-repeat: no-repeat;
+            @include animation(transFont 3s linear 2s infinite alternate);
+          }
+        }
+        .safe {
+          position: absolute;
+          left: 61px;
+          top: 96px;
+          z-index: 2;
+          @include animation(upDown-min 2s linear 1s infinite alternate);
+        }
+        .floor {
+          position: absolute;
+          right: 18px;
+          top: 125px;
+          z-index: 2;
+          @include animation(upDown-min 2s linear 0s infinite alternate);
+        }
+        .ok {
+          position: absolute;
+          right: 86px;
+          top: 189px;
+          z-index: 2;
+          @include animation(upDown-min 2s linear 2s infinite alternate);
+        }
+      }
+      .cover {
+        position: absolute;
+        width: 100%;
+        z-index: 7;
+      }
+      .footer {
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+        bottom: 0;
+      }
+    }
+    .show-btn {
+      position: relative;
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+      width: 319px;
+      height: 90px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      &.btn1 {
+        background-image: url("../img/state/btn/scene.png");
+        .light-line {
+          @include animation(btnleftIn 4s linear 0s infinite);
+        }
+      }
+      &.btn2 {
+        background-image: url("../img/state/btn/content.png");
+        .light-line {
+          @include animation(btnleftIn 4s linear 1s infinite);
+        }
+      }
+      &.btn3 {
+        background-image: url("../img/state/btn/manager.png");
+        .light-line {
+          @include animation(btnleftIn 4s linear 2s infinite);
+        }
+      }
+      &.btn4 {
+        background-image: url("../img/state/btn/teach.png");
+        .light-line {
+          @include animation(btnleftIn 4s linear 3s infinite);
+        }
+      }
+      .light-line {
+        position: absolute;
+        bottom: 0;
+        left: 300%;
+        width: 175px;
+        height: 3px;
+      }
+    }
+  }
+  .right-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 258px;
+    .right-menu-title {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 258px;
+      height: 104px;
+      background-image: url("../img/state/right-menu-title.png");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
+      .light-box {
+        position: absolute;
+        display: flex;
+        justify-content: space-evenly;
+        top: 2px;
+        width: 78px;
+        height: 10px;
+        background-color: #000a45;
+        border-bottom: 1px solid #20a0af;
+        border-left: 1px solid #20a0af;
+        border-right: 1px solid #20a0af;
+        .light-item {
+          margin-top: -2px;
+          width: 9px;
+          height: 9px;
+          background-color: rgba(54, 222, 241, 0.4);
+          &.item1 {
+            @include animation(lightning 3s linear 0s infinite alternate);
+          }
+          &.item2 {
+            @include animation(lightning 3s linear 1s infinite alternate);
+          }
+          &.item3 {
+            @include animation(lightning 3s linear 2s infinite alternate);
+          }
+          &.item4 {
+            @include animation(lightning 3s linear 2s infinite alternate);
+          }
+          &.item5 {
+            @include animation(lightning 3s linear 1s infinite alternate);
+          }
+          &.item6 {
+            @include animation(lightning 3s linear 0s infinite alternate);
+          }
+        }
+      }
+      .light-line {
+        position: absolute;
+        bottom: 2px;
+      }
+    }
+    .right-menu-item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 252px;
+      height: 88px;
+      overflow: hidden;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: left top;
+      .light-line {
+        position: absolute;
+        left: -100%;
+        bottom: 0px;
+        width: 100px;
+        height: 3px;
+        // @include transform(translateX(-200%));
+      }
+      &.menu-item1 {
+        background-image: url("../img/state/right-menu-test.png");
+        .light-line {
+          @include animation(btnleftInBig 6s linear 0s infinite);
+        }
+      }
+      &.menu-item2 {
+        background-image: url("../img/state/right-menu-fill.png");
+        .light-line {
+          @include animation(btnRightIn 6s linear 1s infinite);
+        }
+      }
+      &.menu-item3 {
+        background-image: url("../img/state/right-menu-school.png");
+        .light-line {
+          @include animation(btnleftInBig 6s linear 2s infinite);
+        }
+      }
+      &.menu-item4 {
+        background-image: url("../img/state/right-menu-teach.png");
+        .light-line {
+          @include animation(btnRightIn 6s linear 3s infinite);
+        }
+      }
+      &.menu-item5 {
+        background-image: url("../img/state/right-menu-commit.png");
+        .light-line {
+          @include animation(btnleftInBig 6s linear 4s infinite);
+        }
+      }
+      &.menu-item6 {
+        background-image: url("../img/state/right-menu-more.png");
+        .light-line {
+          @include animation(btnRightIn 6s linear 5s infinite);
+        }
+      }
+    }
+  }
+}
+.footer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 10px 10px;
+  height: 190px;
+  .line-box {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 27px;
+    overflow: hidden;
+    .line {
+      width: 100%;
+      background-color: rgb(70, 226, 255);
+      height: 3px;
+    }
+    .arrow {
+      position: absolute;
+      left: 50%;
+      margin-left: -12px;
+      z-index: 1;
+    }
+    .point {
+      position: absolute;
+      z-index: 0;
+    }
+  }
+  .rightIn {
+    right: -100%;
+    @include animation(pointrightIn 3s linear 0s infinite);
+  }
+  .leftIn {
+    left: -100%;
+    @include animation(pointleftIn 3s linear 0s infinite);
+  }
+  .topIn {
+    top: -100%;
+    @include animation(pointtopIn 3s linear 0s infinite);
+  }
+  .top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 69px;
+    .line-box {
+      top: -5px;
+      justify-content: center;
+      width: 27px;
+      height: 76px;
+      .arrow {
+        @include transform(rotate(-90deg));
+      }
+      .line {
+        width: 3px;
+        height: 100%;
+      }
+    }
+  }
+  .left {
+    position: relative;
+    width: 370px;
+    height: 106px;
+    background-image: url("../img/state/footer-min-left.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .line-box {
+      width: 118px;
+      right: -118px;
+      bottom: 40px;
+    }
+  }
+  .center {
+    position: relative;
+    width: 924px;
+    height: 106px;
+    overflow: hidden;
+    background-image: url("../img/state/footer-center.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .light-line {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include animation(fadeScaleLeftIn 10s linear 0s infinite);
+    }
+  }
+  .right {
+    position: relative;
+    width: 370px;
+    height: 106px;
+    background-image: url("../img/state/footer-min-right.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .line-box {
+      width: 118px;
+      left: -118px;
+      bottom: 40px;
+      .arrow {
+        @include transform(rotate(180deg));
+      }
+    }
+  }
+}
