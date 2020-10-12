@@ -1,0 +1,100 @@
+@import "./commonFn.scss";
+.p-live {
+  position: relative;
+  padding-top: 108px;
+  width: 1920px;
+  height: 1080px;
+  background-image: url("../img/live/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  .top-title {
+    margin: 0 auto 30px;
+    width: 1669px;
+    height: 95px;
+    background-image: url("../img/live/top-title.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+  .container {
+    margin: 0 66px 0 89px;
+    display: flex;
+    .title {
+      display: block;
+    }
+   .c-left {
+     .plan-list {
+       margin: 0 0 20px 7px;
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+       width: 874px;
+       .plan-item {
+         position: relative;
+         margin: 5px 0 0;
+         width: 425px;
+         height: 133px;
+         background-image: url("../img/live/plan-bg.png");
+         background-repeat: no-repeat;
+         background-position-x: 10px;
+         .img-cover,.img-box {
+           position: absolute;
+           top: 11px;
+           left: 0;
+           width: 100px;
+           height: 100px;
+         }
+         .img-cover {
+           z-index: 1;
+         }
+         .img-box {
+           img {
+             display: block;
+             width: 100%;
+             height: 100%;
+           }
+         }
+         .plan-font {
+           margin: 25px 0 0 115px;
+         }
+       }
+     }
+
+     .apply-list {
+       display: flex;
+       justify-content: space-between;
+       margin: 10px 0 0 7px;
+       width: 874px;
+     }
+   }
+   .c-right {
+     margin-left: 40px;
+     .title {
+
+     }
+     .video-container {
+       margin-top: 35px;
+       padding-top: 25px;
+       width: 853px;
+       height: 640px;
+       background-image: url("../img/live/video-bg.png");
+     }
+     .video-box {
+       display: flex;
+       margin: 0 auto;
+       justify-content: center;
+       align-items: center;
+       width: 780px;
+       height: 578px;
+       background-color: #000;
+       cursor: pointer;
+       .play-btn {
+         position: absolute;
+       }
+       #video {
+         max-width: 100%;
+         max-height: 100%;
+       }
+     }
+   } 
+  }
+}
