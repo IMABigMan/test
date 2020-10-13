@@ -1,4 +1,212 @@
 @import "./commonFn.scss";
+@-webkit-keyframes scale {
+  0% {
+    @include transform(scale(1));
+  }
+  100% {
+    @include transform(scale(1.1));
+  }
+}
+@keyframes scale {
+  0% {
+    @include transform(scale(1));
+  }
+  100% {
+    @include transform(scale(1.1));
+  }
+}
+@-webkit-keyframes scaleX {
+  0% {
+    @include transform(scaleX(1));
+  }
+  100% {
+    @include transform(scaleX(1.3));
+  }
+}
+@keyframes scaleX {
+  0% {
+    @include transform(scaleX(1));
+  }
+  100% {
+    @include transform(scaleX(1.3));
+  }
+}
+@-webkit-keyframes scaleY {
+  0% {
+    @include transform(scaleY(1));
+  }
+  100% {
+    @include transform(scaleY(1.3));
+  }
+}
+@keyframes scaleY {
+  0% {
+    @include transform(scaleY(1));
+  }
+  100% {
+    @include transform(scaleY(1.3));
+  }
+}
+@-webkit-keyframes circleMove {
+  0% {
+    top: 8px;
+    left: 21px;
+  }
+  10% {
+    top: -1px;
+    left: 21px;
+  }
+  50% {
+    top: -1px;
+    left: 405px;
+  }
+  55% {
+    left: 419px;
+    top: 14px;
+  }
+  75% {
+    left: 419px;
+    top: 118px;
+  }
+  100% {
+    top: 118px;
+    left: 261px;
+  }
+}
+@keyframes circleMove {
+  0% {
+    top: 8px;
+    left: 21px;
+  }
+  10% {
+    top: -1px;
+    left: 21px;
+  }
+  50% {
+    top: -1px;
+    left: 405px;
+  }
+  55% {
+    left: 419px;
+    top: 14px;
+  }
+  75% {
+    left: 419px;
+    top: 118px;
+  }
+  100% {
+    top: 118px;
+    left: 261px;
+  }
+}
+@-webkit-keyframes circleMoveLeft {
+  0% {
+    top: -4px;
+    left: 5px;
+  }
+  10% {
+    top:-4px;
+    left: -5px;
+  }
+  90% {
+    top: 160px;
+    left: -5px;
+  }
+  100% {
+    top: 160px;
+    left: 5px;
+  }
+}
+@keyframes circleMoveLeft {
+  0% {
+    top: -4px;
+    left: 5px;
+  }
+  10% {
+    top:-4px;
+    left: -5px;
+  }
+  90% {
+    top: 160px;
+    left: -5px;
+  }
+  100% {
+    top: 160px;
+    left: 5px;
+  }
+}
+@-webkit-keyframes circleMoveTop {
+  0% {
+    left: 490px;
+    top: 8px;
+  }
+  5% {
+    left: 490px;
+    top: -3px;
+  }
+  95% {
+    top: -3px;
+    left: -4px;
+  }
+  100% {
+    top: 8px;
+    left: -4px;
+  }
+}
+@keyframes circleMoveTop {
+  0% {
+    left: 490px;
+    top: 8px;
+  }
+  5% {
+    left: 490px;
+    top: -3px;
+  }
+  95% {
+    top: -3px;
+    left: -4px;
+  }
+  100% {
+    top: 8px;
+    left: -4px;
+  }
+}
+@-webkit-keyframes circleMoveBottom {
+  0% {
+    left: -4px;
+    top: -3px;
+  }
+  5% {
+    left: -4px;
+    top: 10px;
+  }
+  95% {
+    left: 490px;
+    top: 10px;
+  }
+  100% {
+    left: 490px;
+    top: -3px;
+  }
+}
+@keyframes circleMoveBottom {
+  0% {
+    left: -4px;
+    top: -3px;
+  }
+  5% {
+    left: -4px;
+    top: 10px;
+  }
+  95% {
+    left: 490px;
+    top: 10px;
+  }
+  100% {
+    left: 490px;
+    top: -3px;
+  }
+}
 .p-live {
   position: relative;
   padding-top: 108px;
@@ -7,6 +215,15 @@
   background-image: url("../img/live/bg.jpg");
   background-repeat: no-repeat;
   background-position: left top;
+
+  .icon-circle {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: rgb(4, 225, 253);
+    border-radius: 50%;
+    z-index: 0;
+  }
   .top-title {
     margin: 0 auto 30px;
     width: 1669px;
@@ -36,21 +253,48 @@
          background-image: url("../img/live/plan-bg.png");
          background-repeat: no-repeat;
          background-position-x: 10px;
+         &.plan-item1,&.plan-item3 {
+          .icon-circle {
+            // @include animation(circleMove 3s linear 0s infinite);
+          }
+         }
+         &.plan-item2,&.plan-item4 {
+          .icon-circle {
+            // @include animation(circleMove 3s linear 1000ms infinite);
+          }
+         }
+        //  &.plan-item3 {
+        //   .icon-circle {
+        //     @include animation(circleMove 2s linear 1000ms infinite);
+        //   }
+        //  }
+        //  &.plan-item4 {
+        //   .icon-circle {
+        //     @include animation(circleMove 2s linear 1500ms infinite);
+        //   }
+        //  }
+         .icon-circle {
+           top: 8px;
+           left: 21px;
+          }
          .img-cover,.img-box {
            position: absolute;
            top: 11px;
            left: 0;
            width: 100px;
            height: 100px;
-         }
-         .img-cover {
            z-index: 1;
          }
+         .img-cover {
+           z-index: 2;
+         }
          .img-box {
+          overflow: hidden;
            img {
              display: block;
              width: 100%;
              height: 100%;
+             @include animation(scale 2s linear 0s infinite alternate);
            }
          }
          .plan-font {
@@ -62,8 +306,48 @@
      .apply-list {
        display: flex;
        justify-content: space-between;
-       margin: 10px 0 0 7px;
-       width: 874px;
+       margin: 10px 0 0 0;
+       width: 878px;
+       .apply-item {
+         position: relative;
+         &.apply-item1 {
+           padding-left: 12px;
+         }
+       }
+       .apply-tool {
+         position: absolute;
+         top: 60px;
+         left: 0;
+         display: inline-block;
+         width: 12px;
+         height: 165px;
+         .icon-circle {
+          top: -4px;
+          left: 5px;
+          @include animation(circleMoveLeft 2s linear 0s infinite);
+
+         }
+         .icon-left1 {
+           position: absolute;
+           top: -15px;
+           right: -8px;
+           width: 19px;
+           height: 30px;
+           background-image: url("../img/live/icon-left1.png");
+           @include animation(scaleY 2s linear 0s infinite alternate);
+         }
+         .icon-left2 {
+           position: absolute;
+           right: -8px;
+           bottom: -39px;
+           width: 19px;
+           height: 77px;
+           background-image: url("../img/live/icon-left2.png");
+           @include animation(scaleY 2s linear 500ms infinite alternate);
+         }
+         .apply-left {
+         }
+       }
      }
    }
    .c-right {
@@ -72,13 +356,74 @@
 
      }
      .video-container {
+       position: relative;
        margin-top: 35px;
        padding-top: 25px;
        width: 853px;
        height: 640px;
        background-image: url("../img/live/video-bg.png");
      }
+     .apply-tool {
+      position: absolute;
+      top: -13px;
+      left: 307px;
+      height: 14px;
+      .icon-top1 {
+        position: absolute;
+        left: -44px;
+        bottom: -8px;
+        width: 88px;
+        height: 18px;
+        background-image: url("../img/live/icon-top1.png");
+        background-size: 100% 100%;
+        @include animation(scaleX 2s linear 0s infinite alternate);
+      }
+      .icon-top2 {
+        position: absolute;
+        right: -18px;
+        bottom: -8px;
+        width: 36px;
+        height: 18px;
+        background-image: url("../img/live/icon-top2.png");
+        @include animation(scaleX 2s linear 0s infinite alternate);
+      }
+      .icon-circle {
+        left: 490px;
+        top: 8px;
+        @include animation(circleMoveTop 2s linear 0s infinite);
+      }
+    }
+    .apply-tool-bottom {
+      position: absolute;
+      bottom: -13px;
+      left: 137px;
+      height: 14px;
+      .icon-bottom1 {
+        position: absolute;
+        left: -18px;
+        top: -8px;
+        width: 36px;
+        height: 18px;
+        background-image: url("../img/live/icon-bottom1.png");
+        @include animation(scaleX 2s linear 0s infinite alternate);
+      }
+      .icon-bottom2 {
+        position: absolute;
+        right: -44px;
+        top: -8px;
+        width: 88px;
+        height: 18px;
+        background-image: url("../img/live/icon-bottom2.png");
+        @include animation(scaleX 2s linear 0s infinite alternate);
+      }
+      .icon-circle {
+        left: 490px;
+        top: 8px;
+        @include animation(circleMoveBottom 2s linear 0s infinite);
+      }
+    }
      .video-box {
+       position: relative;
        display: flex;
        margin: 0 auto;
        justify-content: center;
@@ -89,6 +434,7 @@
        cursor: pointer;
        .play-btn {
          position: absolute;
+         @include animation(scale 2s linear 0s infinite alternate);
        }
        #video {
          max-width: 100%;
