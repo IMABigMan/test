@@ -760,19 +760,33 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      top: 258px;
-      right: 43px;
+      top: 230px;
+      right: 53px;
       width: 373px;
+      .right-title1 {
+        width: 375px;
+        height: 70px;
+        background-image: url('../img/state2/right-title1.png');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+      }
+      .right-title2 {
+        width: 375px;
+        height: 70px;
+        background-image: url('../img/state2/right-title2.png');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+      }
       .right-item {
         position: relative;
         display: block;
-        margin-bottom: 10px;
         flex-shrink: 0;
         width: 186px;
-        height: 101px;
+        height: 94px;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         overflow: hidden;
+        cursor: pointer;
         &::before,&::after {
           content: "";
           position: absolute;
@@ -922,57 +936,100 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      top: 258px;
-      left: 43px;
+      top: 230px;
+      left: 53px;
       width: 373px;
-      .left-top {
-        margin-bottom: 20px;
-        width: 374px;
-        height: 157px;
-        background-image: url('../img/state2/left-top.png');
+      .left-title {
+        width: 357px;
+        height: 70px;
+        background-image: url('../img/state2/left-title.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        &::after {
-          @include animation(leftLightMove 5s linear 0s infinite);
-        }
       }
-      .left-footer {
-        margin-top: 20px;
-        width: 374px;
-        height: 157px;
-        background-image: url('../img/state2/left-footer.png');
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        &::after {
-          left: -100%;
-          @include animation(leftLightMove 5s linear 4s infinite);
-        }
+      .item-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
       .left-item {
         display: block;
-        width: 374px;
-        height: 104px;
+        margin-bottom: 10px;
+        width: 186px;
+        height: 93px;
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        &.max-item {
+          width: 374px;
+          height: 104px;
+        }
         &.left-item1 {
           background-image: url('../img/state2/left-item1.png');
           &::after {
             right: -100%;
-            @include animation(rightLightMove 5s linear 1s infinite);
+            @include animation(rightLightMove 6s linear 1s infinite);
           }
         }
         &.left-item2 {
           background-image: url('../img/state2/left-item2.png');
           &::after {
             left: -100%;
-            @include animation(leftLightMove 5s linear 2s infinite);
+            @include animation(leftLightMove 6s linear 2s infinite);
           }
         }
         &.left-item3 {
           background-image: url('../img/state2/left-item3.png');
           &::after {
             right: -100%;
-            @include animation(rightLightMove 5s linear 3s infinite);
+            @include animation(rightLightMove 6s linear 3.5s infinite);
+          }
+        }
+        &.left-item4 {
+          background-image: url('../img/state2/left-item4.png');
+          &::after {
+            right: -100%;
+            @include animation(rightLightMove 6s linear 3s infinite);
+          }
+        }
+        &.left-item5 {
+          background-image: url('../img/state2/left-item5.png');
+          &::after {
+            left: -100%;
+            @include animation(leftLightMove 6s linear 4s infinite);
+          }
+        }
+        &.left-item6 {
+          background-image: url('../img/state2/left-item6.png');
+          &::after {
+            left: -100%;
+            @include animation(leftLightMove 6s linear 4.5s infinite);
+          }
+        }
+        &.left-item7 {
+          background-image: url('../img/state2/left-item7.png');
+          &::after {
+            right: -100%;
+            @include animation(rightLightMove 6s linear 5.5s infinite);
+          }
+        }
+        &.left-item8 {
+          background-image: url('../img/state2/left-item8.png');
+          &::after {
+            right: -100%;
+            @include animation(rightLightMove 6s linear 5s infinite);
+          }
+        }
+        &.left-item9 {
+          background-image: url('../img/state2/left-item9.png');
+          &::after {
+            left: -100%;
+            @include animation(leftLightMove 6s linear 6s infinite);
+          }
+        }
+        &.left-item10 {
+          background-image: url('../img/state2/left-item10.png');
+          &::after {
+            left: -100%;
+            @include animation(leftLightMove 6s linear 6.5s infinite);
           }
         }
       }

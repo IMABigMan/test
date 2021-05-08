@@ -6,8 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="img/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/base.css"></link>
-  <link rel="stylesheet" type="text/css" href="css/state2.css"></link>
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="css/state2.css">
+  </link>
   <title>渝书坊</title>
   <script>
     function fullScreen() {
@@ -68,7 +70,7 @@
         <div class="rect rect3"></div>
       </div>
     </div>
-    
+
     <div class="content">
       <div class="top-box">
         <div class="item-box">
@@ -86,12 +88,14 @@
         </div>
       </div>
       <div class="right-box">
-        <div class="right-item right-item1"></div>
-        <div class="right-item right-item2"></div>
-        <div class="right-item right-item3"></div>
-        <div class="right-item right-item4"></div>
-        <div class="right-item right-item5"></div>
-        <div class="right-item right-item6"></div>
+        <div class="right-title1"></div>
+        <div class="right-item right-item1" onclick="toPage(1)"></div>
+        <div class="right-item right-item2" onclick="toPage(2)"></div>
+        <div class="right-item right-item3" onclick="toPage(3)"></div>
+        <div class="right-item right-item4" onclick="toPage(4)"></div>
+        <div class="right-item right-item5" onclick="toPage(5)"></div>
+        <div class="right-item right-item6" onclick="toPage(6)"></div>
+        <div class="right-title2"></div>
         <div class="right-item right-item7"></div>
         <div class="right-item right-item8"></div>
         <div class="right-item right-item9"></div>
@@ -100,7 +104,9 @@
         <div class="right-item right-item12"></div>
       </div>
       <div class="left-box">
-        <div class="left-top">
+        <div class="left-title"></div>
+
+        <!-- <div class="left-top">
            <div class="light-box light-box1">
              <div class="light light1"></div>
              <div class="light light2"></div>
@@ -108,9 +114,9 @@
              <div class="light light4"></div>
              <div class="light light5"></div>
            </div>
-        </div>
+        </div> -->
         <div class="item-box">
-          <div class="left-item left-item1">
+          <div class="left-item max-item left-item1">
             <div class="light-box light-box2">
               <div class="light light1"></div>
               <div class="light light2"></div>
@@ -119,7 +125,7 @@
               <div class="light light5"></div>
             </div>
           </div>
-          <div class="left-item left-item2">
+          <div class="left-item max-item left-item2">
             <div class="light-box light-box3">
               <div class="light light1"></div>
               <div class="light light2"></div>
@@ -129,13 +135,20 @@
             </div>
           </div>
           <div class="left-item left-item3">
-            <div class="light-box light-box4">
-              <div class="light light1"></div>
-              <div class="light light2"></div>
-              <div class="light light3"></div>
-              <div class="light light4"></div>
-              <div class="light light5"></div>
-            </div>
+          </div>
+          <div class="left-item left-item4">
+          </div>
+          <div class="left-item left-item5">
+          </div>
+          <div class="left-item left-item6">
+          </div>
+          <div class="left-item left-item7">
+          </div>
+          <div class="left-item left-item8">
+          </div>
+          <div class="left-item left-item9">
+          </div>
+          <div class="left-item left-item10">
           </div>
         </div>
         <div class="left-footer">
@@ -146,14 +159,6 @@
             <div class="light light4"></div>
             <div class="light light5"></div>
           </div>
-        </div>
-        <div class="line-box line-box1">
-          <div class="line"></div>
-          <img class="point" src="img/state2/center/point.png" alt="">
-        </div>
-        <div class="line-box line-box2">
-          <div class="line"></div>
-          <img class="point" src="img/state2/center/point.png" alt="">
         </div>
       </div>
       <div class="center-box">
@@ -229,28 +234,57 @@
 </body>
 <script>
   function formatDate(date) {
-  var date = null
-  if (date) {
-    date = new Date(date)
-  } else {
-    date = new Date();
+    var date = null
+    if (date) {
+      date = new Date(date)
+    } else {
+      date = new Date();
+    }
+    var YY = date.getFullYear();
+    var MM = date.getMonth() + 1;
+    var DD = date.getDate();
+    var hh = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours());
+    var mm = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+    var ss = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+    return YY + '年' + MM + '月' + DD + "日 " + hh + ':' + mm + ':' + ss;
   }
-  var YY = date.getFullYear();
-  var MM = date.getMonth() + 1;
-  var DD = date.getDate();
-  var hh = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours());
-  var mm = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
-  var ss = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
-  return YY + '年' + MM + '月' + DD +"日 "+hh+ ':' + mm + ':' + ss;
-}
-var timeEl = document.getElementById('time');
-function buildTime () {
-  timeEl.innerText = formatDate()
-}
-buildTime();
-setInterval(() => {
+  var timeEl = document.getElementById('time');
+  function buildTime() {
+    timeEl.innerText = formatDate()
+  }
   buildTime();
-}, 1000);
+  setInterval(() => {
+    buildTime();
+  }, 1000);
+
+  /** 页面跳转 */
+  function toPage(type) {
+    var url = '';
+    var a = document.createElement('a')
+    a.setAttribute('target', '_blank')
+    switch (type) {
+      case 1:
+        url = 'https://img.chinazhile.com/datashow/library.html'
+        break;
+      case 2:
+        url = 'http://img.chinazhile.com/eventsystem/#/'
+        break;
+      case 3:
+        url = 'http://cqcbjt.school.tjzzcb.com/'
+        break;
+      case 4:
+        url = 'https://edu.chinazhile.com/chaoyang/#/'
+        break;
+      case 5:
+        url = 'http://www.chinazhile.com/security'
+        break;
+      case 6:
+        url = 'https://zyds.chinazhile.com/#/index'
+        break;
+    }
+    a.href = url;
+    a.click()
+  }
 </script>
 
 </html>
