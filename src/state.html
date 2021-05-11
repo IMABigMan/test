@@ -95,9 +95,9 @@
         <div class="right-item right-item4" onclick="toPage(4)"></div>
         <div class="right-item right-item5" onclick="toPage(5)"></div>
         <div class="right-item right-item6" onclick="toPage(6)"></div>
-        <div class="right-title2"></div>
-        <div class="right-item right-item7"></div>
-        <div class="right-item right-item8"></div>
+        <!-- <div class="right-title2"></div> -->
+        <div class="right-item right-item7" onclick="toPage(7)"></div>
+        <div class="right-item right-item8" onclick="toPage(8)"></div>
         <div class="right-item right-item9"></div>
         <div class="right-item right-item10"></div>
         <div class="right-item right-item11"></div>
@@ -264,22 +264,28 @@
     a.setAttribute('target', '_blank')
     switch (type) {
       case 1:
-        url = 'https://img.chinazhile.com/datashow/library.html'
+        url = 'http://rp.chinazhile.com/#/yuBookStore'
         break;
       case 2:
         url = 'http://img.chinazhile.com/eventsystem/#/'
         break;
       case 3:
-        url = 'http://cqcbjt.school.tjzzcb.com/'
+        url = 'https://ispt.com.cn/'
         break;
       case 4:
-        url = 'https://edu.chinazhile.com/chaoyang/#/'
+        url = 'https://zyds.chinazhile.com/#/index'
         break;
       case 5:
-        url = 'http://www.chinazhile.com/security'
+        url = 'http://cqcbjt.school.tjzzcb.com/'
         break;
       case 6:
-        url = 'https://zyds.chinazhile.com/#/index'
+        url = 'https://edu.chinazhile.com/chaoyang/#/'
+        break;
+      case 7:
+        url = 'https://livecast.chinazhile.com/'
+        break;
+      case 8:
+        url = 'https://livecast.chinazhile.com/'
         break;
     }
     a.href = url;
