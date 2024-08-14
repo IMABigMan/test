@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="css/library.css">
+  </link>
+  <title>渝书坊</title>
+  <script>
+    function fullScreen() {
+      var docElm = document.documentElement;
+      //W3C
+      if (docElm.requestFullscreen) {
+        docElm.requestFullscreen();
+      }
+      //FireFox
+      else if (docElm.mozRequestFullScreen) {
+        docElm.mozRequestFullScreen();
+      }
+      //Chrome等
+      else if (docElm.webkitRequestFullScreen) {
+        docElm.webkitRequestFullScreen();
+      }
+      //IE11
+      else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      }
+    }
+    window.onload = function () {
+      fullScreen()
+    }
+  </script>
+</head>
+
+<body onclick="fullScreen()">
+  <noscript>
+    <strong>We're sorry but ultra-shbank-portal-bigdata-client doesn't work properly without JavaScript enabled. Please
+      enable it to continue.</strong>
+  </noscript>
+  <div id="app" class="p-library">
+    <div class="top-title"></div>
+    <div class="container">
+      <div class="c-left">
+        <img class="title" src="img/library/title2.png" alt="">
+        <div class="video-container">
+          <div class="apply-tool">
+            <div class="icon-top1"></div>
+            <div class="icon-top2"></div>
+            <img class="apply-top" src="img/library/apply-tool-top.png" alt="">
+            <div class="icon-circle"></div>
+          </div>
+          <div class="apply-tool-bottom">
+            <div class="icon-bottom1"></div>
+            <div class="icon-bottom2"></div>
+            <img class="apply-bottom" src="img/library/apply-tool-bottom.png" alt="">
+            <div class="icon-circle"></div>
+          </div>
+          <div class="video-box">
+            <img onclick="playVideo()" id="playBtn" class="play-btn" src="img/library/play.png" alt="">
+            <video onclick="playVideo()" id="video" src="media/banner.mp4" loop></video>
+          </div>
+        </div>
+      </div>
+      <div class="c-right">
+        <img class="title" src="img/library/title3.png" alt="">
+        <div class="conatiner">
+          <div class="plan-list">
+            <img class="min-title" src="img/library/min-title1.png" alt="">
+            <div class="plan-item plan-item1">
+              <img src="img/library/plan-box.png" alt="" class="img-cover">
+              <div class="img-box">
+                <img class="plan-img" src="img/library/plan-img1.jpg" alt="">
+              </div>
+              <div class="icon-circle"></div>
+            </div>
+            <div class="plan-item plan-item2">
+              <img src="img/library/plan-box.png" alt="" class="img-cover">
+              <div class="img-box">
+                <img class="plan-img" src="img/library/plan-img2.jpg" alt="">
+              </div>
+              <div class="icon-circle"></div>
+            </div>
+            <div class="plan-item plan-item3">
+              <img src="img/library/plan-box.png" alt="" class="img-cover">
+              <div class="img-box">
+                <img class="plan-img" src="img/library/plan-img3.jpg" alt="">
+              </div>
+              <div class="icon-circle"></div>
+            </div>
+            <div class="plan-item plan-item4">
+              <img src="img/library/plan-box.png" alt="" class="img-cover">
+              <div class="img-box">
+                <img class="plan-img" src="img/library/plan-img4.jpg" alt="">
+              </div>
+              <div class="icon-circle"></div>
+            </div>
+          </div>
+          <div class="content-list">
+            <img class="min-title" src="img/library/min-title2.png" alt="">
+            <img class="content-img" src="img/library/content-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  function playVideo() {
+    var video = document.getElementById('video');
+    var playBtn = document.getElementById("playBtn");
+    if (video.paused) {
+      playBtn.style.display = "none";
+      video.play();
+    } else {
+      playBtn.style.display = "block";
+      video.pause();
+    }
+  }
+</script>
+
+</html>

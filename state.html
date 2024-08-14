@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="css/state2.css">
+  </link>
+  <title>渝书坊</title>
+  <script>
+    function fullScreen() {
+      var docElm = document.documentElement;
+      //W3C
+      if (docElm.requestFullscreen) {
+        docElm.requestFullscreen();
+      }
+      //FireFox
+      else if (docElm.mozRequestFullScreen) {
+        docElm.mozRequestFullScreen();
+      }
+      //Chrome等
+      else if (docElm.webkitRequestFullScreen) {
+        docElm.webkitRequestFullScreen();
+      }
+      //IE11
+      else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      }
+    }
+    window.onload = function () {
+      fullScreen()
+    }
+  </script>
+</head>
+
+<body onclick="fullScreen()">
+  <noscript>
+    <strong>We're sorry but ultra-shbank-portal-bigdata-client doesn't work properly without JavaScript enabled. Please
+      enable it to continue.</strong>
+  </noscript>
+  <div id="app" class="p-state">
+    <div class="header">
+      <div id="time"></div>
+      <div class="title-line"></div>
+      <div class="circle-box circle-box1">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+      </div>
+      <div class="circle-box circle-box2">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+      </div>
+
+      <div class="rect-box rect-box1">
+        <div class="rect rect1"></div>
+        <div class="rect rect2"></div>
+        <div class="rect rect3"></div>
+      </div>
+      <div class="rect-box rect-box2">
+        <div class="rect rect1"></div>
+        <div class="rect rect2"></div>
+        <div class="rect rect3"></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="top-box">
+        <div class="item-box">
+          <div class="top-item top-item1"></div>
+          <div class="top-item top-item2"></div>
+          <div class="top-item top-item3"></div>
+        </div>
+        <div class="line-box line-box1">
+          <div class="line"></div>
+          <img class="point" src="img/state2/center/point.png" alt="">
+        </div>
+        <div class="line-box line-box2">
+          <div class="line"></div>
+          <img class="point" src="img/state2/center/point.png" alt="">
+        </div>
+      </div>
+      <div class="right-box">
+        <div class="right-title1"></div>
+        <div class="right-item right-item1" onclick="toPage(1)"></div>
+        <div class="right-item right-item2" onclick="toPage(2)"></div>
+        <div class="right-item right-item3" onclick="toPage(3)"></div>
+        <div class="right-item right-item4" onclick="toPage(4)"></div>
+        <div class="right-item right-item5" onclick="toPage(5)"></div>
+        <div class="right-item right-item6" onclick="toPage(6)"></div>
+        <!-- <div class="right-title2"></div> -->
+        <div class="right-item right-item7" onclick="toPage(7)"></div>
+        <div class="right-item right-item8" onclick="toPage(8)"></div>
+        <div class="right-item right-item9"></div>
+        <div class="right-item right-item10"></div>
+        <div class="right-item right-item11"></div>
+        <div class="right-item right-item12"></div>
+      </div>
+      <div class="left-box">
+        <div class="left-title"></div>
+
+        <!-- <div class="left-top">
+           <div class="light-box light-box1">
+             <div class="light light1"></div>
+             <div class="light light2"></div>
+             <div class="light light3"></div>
+             <div class="light light4"></div>
+             <div class="light light5"></div>
+           </div>
+        </div> -->
+        <div class="item-box">
+          <div class="left-item max-item left-item1">
+            <div class="light-box light-box2">
+              <div class="light light1"></div>
+              <div class="light light2"></div>
+              <div class="light light3"></div>
+              <div class="light light4"></div>
+              <div class="light light5"></div>
+            </div>
+          </div>
+          <div class="left-item max-item left-item2">
+            <div class="light-box light-box3">
+              <div class="light light1"></div>
+              <div class="light light2"></div>
+              <div class="light light3"></div>
+              <div class="light light4"></div>
+              <div class="light light5"></div>
+            </div>
+          </div>
+          <div class="left-item left-item3">
+          </div>
+          <div class="left-item left-item4">
+          </div>
+          <div class="left-item left-item5">
+          </div>
+          <div class="left-item left-item6">
+          </div>
+          <div class="left-item left-item7">
+          </div>
+          <div class="left-item left-item8">
+          </div>
+          <div class="left-item left-item9">
+          </div>
+          <div class="left-item left-item10">
+          </div>
+        </div>
+        <div class="left-footer">
+          <div class="light-box light-box5">
+            <div class="light light1"></div>
+            <div class="light light2"></div>
+            <div class="light light3"></div>
+            <div class="light light4"></div>
+            <div class="light light5"></div>
+          </div>
+        </div>
+      </div>
+      <div class="center-box">
+        <div class="img-box img-box1">
+          <div class="img img1"></div>
+          <img src="img/state2/center/1_01.png" class="img img2" alt="">
+          <img src="img/state2/center/1_02.png" class="img img3" alt="">
+        </div>
+        <div class="img-box img-box2">
+          <img src="img/state2/center/2_00.png" class="img img1" alt="">
+          <img src="img/state2/center/2_01.png" class="img img2" alt="">
+          <img src="img/state2/center/2_02.png" class="img img3" alt="">
+          <img src="img/state2/center/2_03.png" class="img img4" alt="">
+        </div>
+        <div class="img-box img-box3">
+          <img src="img/state2/center/3_01.png" class="img img1" alt="">
+          <img src="img/state2/center/3_02b.png" class="img img2" alt="">
+          <img src="img/state2/center/3_03.png" class="img img3" alt="">
+          <img src="img/state2/center/3_04.png" class="img img4" alt="">
+          <img src="img/state2/center/3_05.png" class="img img5" alt="">
+          <img src="img/state2/center/3_06.png" class="img img6" alt="">
+          <img src="img/state2/center/3_07.png" class="img img8" alt="">
+          <img src="img/state2/center/z.png" class="img img7" alt="">
+          <img class="left-point left-point1" src="img/state2/center/point.png" alt="">
+          <img class="left-point left-point2" src="img/state2/center/point.png" alt="">
+          <img class="left-point left-point3" src="img/state2/center/point.png" alt="">
+          <img class="left-point left-point4" src="img/state2/center/point.png" alt="">
+          <img class="right-point right-point1" src="img/state2/center/point.png" alt="">
+          <img class="right-point right-point2" src="img/state2/center/point.png" alt="">
+          <img class="right-point right-point3" src="img/state2/center/point.png" alt="">
+          <img class="right-point right-point4" src="img/state2/center/point.png" alt="">
+        </div>
+        <div class="img-box img-box4">
+          <div class="img img1">
+            <div class="font"></div>
+          </div>
+          <div class="img img2">
+            <div class="font"></div>
+          </div>
+        </div>
+        <div class="img-box img-box5">
+          <img src="img/state2/center/4_02.png" class="img img1" alt="">
+          <img src="img/state2/center/4_03.png" class="img img2" alt="">
+          <div class="person-box">
+            <img src="img/state2/center/5_00.png" class="img img3" alt="">
+            <img src="img/state2/center/5_01.png" class="img img4" alt="">
+            <img src="img/state2/center/5_02a.png" class="img img5" alt="">
+            <img src="img/state2/center/5_02b.png" class="img img7" alt="">
+            <img src="img/state2/center/5_03.png" class="img img6" alt="">
+          </div>
+        </div>
+      </div>
+      <img class="content-title" src="img/state2/content-title.png" alt="">
+      <div class="bottom-box">
+        <div class="item-box">
+          <img src="img/state2/footer-item1.png" alt="" class="bottom-item">
+          <div class="bottom-center">
+            <img class="light-line" src="img/state2/light-line.png" alt="">
+          </div>
+          <img src="img/state2/footer-item3.png" alt="" class="bottom-item">
+        </div>
+        <div class="line-box line-box1">
+          <div class="line"></div>
+          <img class="point" src="img/state2/center/point.png" alt="">
+        </div>
+        <div class="line-box line-box2">
+          <div class="line"></div>
+          <img class="point" src="img/state2/center/point.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  function formatDate(date) {
+    var date = null
+    if (date) {
+      date = new Date(date)
+    } else {
+      date = new Date();
+    }
+    var YY = date.getFullYear();
+    var MM = date.getMonth() + 1;
+    var DD = date.getDate();
+    var hh = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours());
+    var mm = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+    var ss = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+    return YY + '年' + MM + '月' + DD + "日 " + hh + ':' + mm + ':' + ss;
+  }
+  var timeEl = document.getElementById('time');
+  function buildTime() {
+    timeEl.innerText = formatDate()
+  }
+  buildTime();
+  setInterval(() => {
+    buildTime();
+  }, 1000);
+
+  /** 页面跳转 */
+  function toPage(type) {
+    var url = '';
+    var a = document.createElement('a')
+    a.setAttribute('target', '_blank')
+    switch (type) {
+      case 1:
+        url = 'http://rp.chinazhile.com/#/yuBookStore'
+        break;
+      case 2:
+        url = 'http://img.chinazhile.com/eventsystem/#/'
+        break;
+      case 3:
+        url = 'https://ispt.com.cn/'
+        break;
+      case 4:
+        url = 'https://zyds.chinazhile.com/#/index'
+        break;
+      case 5:
+        url = 'http://cqcbjt.school.tjzzcb.com/'
+        break;
+      case 6:
+        url = 'https://edu.chinazhile.com/chaoyang/#/'
+        break;
+      case 7:
+        url = 'https://livecast.chinazhile.com/'
+        break;
+      case 8:
+        url = 'https://livecast.chinazhile.com/'
+        break;
+    }
+    a.href = url;
+    a.click()
+  }
+</script>
+
+</html>
